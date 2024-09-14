@@ -27,13 +27,13 @@ Le jeu de données comprend environ **200 000 arbres**, avec les colonnes princi
 
 ## Résultats
 ### Distribution des circonférences des arbres
-![Distribution de la circonférence des arbres](distribution_circonference.png)
+![Distribution de la circonférence des arbres](images/distribution_circonference.png)
 
 ### Distribution des hauteurs des arbres
-![Distribution de la hauteur des arbres](distribution_hauteur.png)
+![Distribution de la hauteur des arbres](images/distribution_hauteur.png)
 
 ### Analyse des variables quantitatives hauteur et circonférence par régression linéaire
-![Analyse de la hauteur et la circonférence par régression linéaire](Analyse_regression_lineaire.png)
+![Analyse de la hauteur et la circonférence par régression linéaire](images/Analyse_regression_lineaire.png)
 
 ## Comment exécuter le projet
 1. Clonez le dépôt GitHub :
