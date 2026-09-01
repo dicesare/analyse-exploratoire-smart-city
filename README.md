@@ -1,50 +1,51 @@
+# Paris Trees — Exploratory Data Analysis
 
-# Analyse exploratoire des arbres de Paris
+Exploratory analysis of nearly 200,000 trees from the City of Paris open-data portal. The project demonstrates data-quality checks, outlier handling, descriptive statistics and the relationship between tree height and circumference.
 
-Ce projet fait partie d'un concours Smart City dans le cadre du programme **"Végétalisons la ville"**. 
-L'objectif est de réaliser une analyse exploratoire des données des arbres de Paris pour mieux comprendre 
-leur répartition et leur état.
+## Highlights
 
-## Objectifs du projet
-- Analyser les données des arbres à Paris pour identifier des caractéristiques clés.
-- Visualiser la distribution des circonférences et des hauteurs des arbres.
-- Nettoyer et prétraiter les données pour des analyses plus poussées.
+- reproducible analysis based on an official open dataset;
+- explicit cleaning rules for impossible measurements and missing values;
+- visual comparison of height and circumference distributions;
+- linear-regression exploration;
+- a documented notebook plus testable preparation functions.
 
-## Environnement de développement
-Les outils suivants ont été utilisés pour le projet :
-- **Google Colaboratory** pour l'analyse des données en ligne.
-- **Anaconda** et **Jupyter** pour le développement local.
-- **PyCharm** pour le développement avancé.
+![Height and circumference regression](images/Analyse_regression_lineaire.png)
 
-## Jeu de données
-Les données utilisées pour cette analyse proviennent du site OpenData de la Ville de Paris.
+## Repository structure
 
-### Aperçu des données
-Le jeu de données comprend environ **200 000 arbres**, avec les colonnes principales suivantes :
-- `circonference_cm` : Circonférence de l'arbre en cm
-- `hauteur_m` : Hauteur de l'arbre en mètres
-- `stade_developpement` : Stade de développement de l'arbre (J = Jeune, A = Adulte, etc.)
+```text
+notebooks/          narrative analysis
+src/                reusable data preparation
+tests/              fast unit tests on synthetic data
+images/             exported results
+synthese/           short project summary
+```
 
-## Résultats
-### Distribution des circonférences des arbres
-![Distribution de la circonférence des arbres](images/distribution_circonference.png)
+## Reproduce the analysis
 
-### Distribution des hauteurs des arbres
-![Distribution de la hauteur des arbres](images/distribution_hauteur.png)
+```bash
+python -m venv .venv
+pip install -r requirements.txt
+jupyter lab notebooks/P2_01_notebook.ipynb
+```
 
-### Analyse des variables quantitatives hauteur et circonférence par régression linéaire
-![Analyse de la hauteur et la circonférence par régression linéaire](images/Analyse_regression_lineaire.png)
+The raw dataset is not committed. Download the current tree inventory from the [Paris Open Data portal](https://opendata.paris.fr/) and record the dataset version/date used.
 
-## Comment exécuter le projet
-1. Clonez le dépôt GitHub :
-   ```bash
-   git clone https://github.com/votre-compte/votre-projet.git
-   ```
-2. Installez les dépendances requises :
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Exécutez le notebook `P2_01_notebook.ipynb` pour voir l'analyse complète.
+## Selected results
 
-## Licence
-Ce projet est distribué sous la licence MIT.
+### Circumference distribution
+
+![Circumference distribution](images/distribution_circonference.png)
+
+### Height distribution
+
+![Height distribution](images/distribution_hauteur.png)
+
+## Data responsibility
+
+The source is public municipal data. Generated results should be interpreted as an exploratory snapshot, not as an operational diagnosis of individual trees.
+
+## License
+
+Released under the [MIT License](LICENSE).
