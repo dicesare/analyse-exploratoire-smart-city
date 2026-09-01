@@ -1,21 +1,34 @@
 # Paris Trees — Exploratory Data Analysis
 
-Exploratory analysis of nearly 200,000 trees from the City of Paris open-data portal. The project demonstrates data-quality checks, outlier handling, descriptive statistics and the relationship between tree height and circumference.
+Exploratory analysis of nearly 200,000 trees from the City of Paris open-data portal. The project demonstrates data-quality checks, outlier handling, spatial and biodiversity exploration, descriptive statistics and the relationship between tree height and circumference.
 
 ## Highlights
 
 - reproducible analysis based on an official open dataset;
 - explicit cleaning rules for impossible measurements and missing values;
 - visual comparison of height and circumference distributions;
+- spatial and taxonomic views supporting a Smart City narrative;
 - linear-regression exploration;
-- a documented notebook plus testable preparation functions.
+- documented notebooks plus testable preparation functions.
 
 ![Height and circumference regression](images/Analyse_regression_lineaire.png)
+
+## Case-study gallery
+
+| Study | Focus |
+|---|---|
+| [01 — Data quality](notebooks/01_data_quality.ipynb) | schema, missingness, duplicates and physically implausible measurements |
+| [02 — Urban distribution](notebooks/02_urban_distribution.ipynb) | arrondissement and site-level distribution with exposure-aware interpretation |
+| [03 — Biodiversity](notebooks/03_biodiversity.ipynb) | genus/species diversity and concentration |
+| [04 — Tree morphology](notebooks/04_tree_morphology.ipynb) | height, circumference, outliers and regression limits |
+| [Original narrative analysis](notebooks/P2_01_notebook.ipynb) | complete historical analysis retained on the refreshed branch |
+
+`main` and `portfolio-refresh` currently contain the same cleaned implementation. The gallery makes the different analytical questions visible without duplicating raw data.
 
 ## Repository structure
 
 ```text
-notebooks/          narrative analysis
+notebooks/          narrative analysis and focused case studies
 src/                reusable data preparation
 tests/              fast unit tests on synthetic data
 images/             exported results
@@ -49,3 +62,4 @@ The source is public municipal data. Generated results should be interpreted as 
 ## License
 
 Released under the [MIT License](LICENSE).
+
