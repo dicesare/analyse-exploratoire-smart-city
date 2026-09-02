@@ -25,6 +25,23 @@ Exploratory analysis of nearly 200,000 trees from the City of Paris open-data po
 
 `main` and `portfolio-refresh` currently contain the same cleaned implementation. The gallery makes the different analytical questions visible without duplicating raw data.
 
+## Historical evidence and current competencies
+
+The retained analysis notebook contains **87 cells, 50 stored outputs and 11 figures**. Its verified workflow covers:
+
+- **200,137 trees × 18 fields** from the Paris inventory;
+- missingness and semantic-error analysis, including values placed in the wrong fields;
+- coordinate-based duplicate removal, producing 200,110 distinct locations;
+- defensible morphology filters, yielding **160,021 analysable trees**;
+- distributions across 25 administrative labels, nine management domains, 192 French labels, **175 genera** and 539 species before final filtering;
+- 146 represented genera in the final analytical sample, led by Platanus;
+- lifecycle comparison across young, young-adult, adult and mature trees;
+- height/circumference Pearson correlation of **0.7973**, followed by stage-specific linear regressions.
+
+![Historical analysis funnel](images/historical-analysis-funnel.svg)
+
+The [analysis inventory](synthese/analysis_inventory.md) preserves the decisions and verified results while distinguishing measurement anomalies from genuine exceptional trees.
+
 ## Repository structure
 
 ```text
