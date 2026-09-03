@@ -21,9 +21,10 @@ Exploratory analysis of nearly 200,000 trees from the City of Paris open-data po
 | [02 — Urban distribution](notebooks/02_urban_distribution.ipynb) | arrondissement and site-level distribution with exposure-aware interpretation |
 | [03 — Biodiversity](notebooks/03_biodiversity.ipynb) | genus/species diversity and concentration |
 | [04 — Tree morphology](notebooks/04_tree_morphology.ipynb) | height, circumference, outliers and regression limits |
+| [05 — Historical evidence](notebooks/05_historical_evidence.ipynb) | verified scale, filtering impact and morphology results |
 | [Original narrative analysis](notebooks/P2_01_notebook.ipynb) | complete historical analysis retained on the refreshed branch |
 
-`main` and `portfolio-refresh` currently contain the same cleaned implementation. The gallery makes the different analytical questions visible without duplicating raw data.
+The gallery makes the different analytical questions visible without duplicating raw data. The numeric examples in 02–04 are explicitly illustrative; verified historical results are collected in 05 and the original notebook.
 
 ## Historical evidence and current competencies
 
@@ -55,8 +56,10 @@ synthese/           short project summary
 ## Reproduce the analysis
 
 ```bash
-python -m venv .venv
-pip install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .[dev]
+pytest
 jupyter lab notebooks/P2_01_notebook.ipynb
 ```
 
